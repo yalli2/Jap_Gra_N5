@@ -61,7 +61,7 @@ $('#app').innerHTML = `
   <header class="wrap hero">
     <div class="eyebrow">JLPT N5 Grammar Master · 1–${IDX.length}과</div>
     <h1>JLPT N5 <em>일본어 문법</em></h1>
-    <p>교재 1과부터 마지막 ${IDX.length}과까지 N5 문법을 한국어로 정리했어요. 과마다 핵심 설명과 예문(후리가나·로마자·소리 듣기)을 읽고, 연습문제를 풀어 바로 점수와 정답, 상세한 해설을 확인하세요.</p>
+    <p>교재 1과부터 마지막 ${IDX.length}과까지 N5 문법을 한국어로 정리했어요. 과마다 핵심 설명과 예문(히라가나·로마자·소리 듣기)을 읽고, 연습문제를 풀어 바로 점수와 정답, 상세한 해설을 확인하세요.</p>
     <div class="who">
       <label for="stu">이름</label><input id="stu" type="text" placeholder="이름을 입력하세요" autocomplete="off">
       <div class="overall" id="prog"></div>
@@ -69,7 +69,7 @@ $('#app').innerHTML = `
     <div class="sum" id="sum" style="margin-top:8px"></div>
   </header>
   <main class="wrap">
-    <ol class="steps"><li><b>설명과 예문 읽기</b> — 일본어를 누르면 소리가 나요. 후리가나·로마자·한국어 뜻은 켜고 끌 수 있어요.</li><li><b>연습문제 5종</b> — 뜻 고르기, 일본어 고르기, 빈칸 채우기, 듣고 고르기, 직접 쓰기(로마자 입력 가능)를 풀어요.</li><li><b>채점하기</b>로 점수와 정답, 해설을 확인하고 틀린 문제만 다시 풀어요.</li></ol>
+    <ol class="steps"><li><b>설명과 예문 읽기</b> — 일본어를 누르면 소리가 나요. 히라가나·로마자·한국어 뜻은 켜고 끌 수 있어요.</li><li><b>연습문제 5종</b> — 뜻 고르기, 일본어 고르기, 빈칸 채우기, 듣고 고르기, 직접 쓰기(로마자 입력 가능)를 풀어요.</li><li><b>채점하기</b>로 점수와 정답, 해설을 확인하고 틀린 문제만 다시 풀어요.</li></ol>
     <details class="plan"><summary>📚 추천 학습 순서 (주제별로 묶어서 공부하기)</summary>
       <p>교재의 과 번호는 알파벳(로마자) 순서예요. 문법을 처음 배운다면 아래처럼 주제별로 묶어서 공부하면 이해가 쉬워요.</p>
       <div class="plan-grid">${PLAN.map(([t,d,ids])=>`<div><h3>${t} <small style="font-weight:500;color:var(--muted)">${d}</small></h3>${ids.map(i=>`<a href="Lesson${i}/"><b>${i}</b> ${esc(byId[i].ko)}</a>`).join('')}</div>`).join('')}</div>
@@ -79,7 +79,7 @@ $('#app').innerHTML = `
       <div class="chipbar" id="chips"><button type="button" data-f="all" aria-pressed="true">전체</button>${CATS.map(c=>`<button type="button" data-f="cat:${esc(c)}" aria-pressed="false">${esc(c)}</button>`).join('')}<button type="button" data-f="todo" aria-pressed="false">아직 안 푼 과</button></div>
     </div>
     <div class="grid" id="grid"></div>
-    <footer class="site">교재: JLPT N5 Grammar Master (JLPTsensei.com). 한국어 해설과 연습문제는 수업용으로 새로 만들었습니다. 예문의 후리가나와 로마자는 학습을 돕기 위해 자동 생성한 것이므로 일부 읽기에 오류가 있을 수 있어요.</footer>
+    <footer class="site">교재: JLPT N5 Grammar Master (JLPTsensei.com). 한국어 해설과 연습문제는 수업용으로 새로 만들었습니다. 예문의 히라가나와 로마자는 학습을 돕기 위해 자동 생성한 것이므로 일부 읽기에 오류가 있을 수 있어요.</footer>
   </main>`;
 $('#stu').value = store.get('gdu-name')||'';
 $('#stu').addEventListener('input',e=>store.set('gdu-name',e.target.value));

@@ -158,7 +158,7 @@ function build(){
     </div>
     <div class="keys">
       <span>표시</span>
-      <button type="button" class="tg" data-pref="furi" aria-pressed="true">후리가나</button>
+      <button type="button" class="tg" data-pref="furi" aria-pressed="true">히라가나</button>
       <button type="button" class="tg" data-pref="rom" aria-pressed="true">로마자</button>
       <button type="button" class="tg" data-pref="nokor" aria-pressed="false">한국어 뜻 가리기</button>
       <button type="button" class="tg" data-pref="slow" aria-pressed="false">느리게 듣기</button>
