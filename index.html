@@ -37,13 +37,13 @@ function render(q){
     if(filter==='todo' && pr['ch'+c.id]) return;
     if(filter.startsWith('cat:') && c.cat!==filter.slice(4)) return;
     if(q && !(String(c.id)===q || (c.ja+' '+c.ko+' '+c.en+' '+c.d+' '+c.kw+' '+c.cat).toLowerCase().includes(q))) return;
-    if(c.g!==last){ last=c.g; cards+=`<div class="grp">${PARTS[c.g][0]}<small>${PARTS[c.g][1]}</small></div>`; }
+    if(c.g!==last){ last=c.g; cards+=`<div class="grp">${PARTS[c.g][0]}<small translate="no">${PARTS[c.g][1]}</small></div>`; }
     shown++;
     const p=pr['ch'+c.id];
     cards+=`
       <a class="card" href="Lesson${c.id}/">
         <div class="no">${c.id}<span class="catchip">${esc(c.cat)}</span></div>
-        <h2 class="jp">${esc(c.ja)}</h2>
+        <h2 class="jp" translate="no">${esc(c.ja)}</h2>
         <div class="ko">${esc(c.ko)}</div>
         <div class="desc">${esc(c.d)}</div>
         <div class="bar"><i style="width:${p?p.score/p.total*100:0}%"></i></div>
@@ -91,5 +91,6 @@ $('#chips').addEventListener('click',e=>{
 });
 render('');
 </script>
+<script src="assets/translate.js"></script>
 </body>
 </html>

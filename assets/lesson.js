@@ -167,7 +167,7 @@ function build(){
     </div>
     <div class="novoice" id="novoice" hidden>이 기기에는 일본어 음성이 없어서 소리가 나지 않을 수 있어요. 휴대폰이나 크롬·사파리·엣지 브라우저에서 시도해 보세요.</div>
   </div></div>
-  <header class="col ch-head"><div class="no">LESSON ${N} · ${L.part}</div><h1><span class="jp">${L.ja}</span><small>${L.ko}</small><small class="en">${L.en}</small></h1></header>
+  <header class="col ch-head"><div class="no">LESSON ${N} · ${L.part}</div><h1><span class="jp" translate="no">${L.ja}</span><small>${L.ko}</small><small class="en">${L.en}</small></h1></header>
   <main class="col">
     <section class="theory">${L.theory}</section>
     ${L.ex.map(exHTML).join('')}

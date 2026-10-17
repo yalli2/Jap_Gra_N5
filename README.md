@@ -9,3 +9,6 @@ JLPT N5 Grammar Master(JLPTsensei.com) 1~80과를 한국어로 정리한 인터�
 사이트: https://yalli2.github.io/Jap_Gra_N5/ (GitHub Pages: Settings → Pages → main / root)
 
 후리가나·로마자는 자동 생성 후 검수했으나 일부 오류가 있을 수 있습니다. 교재 오탈자 일부는 수정했습니다.
+
+## 다국어 자동 번역
+처음 접속하면 모국어 선택 창이 열리고(우측 하단 🌐 버튼으로 언제든 변경), 선택한 언어로 사이트 전체가 자동 번역됩니다. 70여 개 언어를 지원하며, 번역에는 Google 번역 위젯을 사용합니다(일본어 예문·후리가나·로마자는 번역되지 않음).
